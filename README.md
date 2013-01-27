@@ -31,7 +31,7 @@ This app was entirely made using Ruby (_1.9.>_) and Ruby on Rails, so you must h
 ##Setup
 
 The app needs to run two servers. 
-First, make sure you run `$ bundle install` to install all the dependencies. Then, setup the database running `$ rake db:migrate` and  fill it up running `$ rake db:seed`.
+First, make sure you run `$ bundle install` to install all the dependencies. Then, setup the database running `$ rake db:create` `$ rake db:migrate` and  fill it up running `$ rake db:seed`.
 
 Now you'll be able to run `$ rails s`, to start the rails server, and  now you can start up that Rack server by running `$ rackup private_pub.ru -s thin -E production`.
 

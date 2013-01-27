@@ -7,7 +7,7 @@ class MessagesController < ApplicationController
   # GET /messages
   # GET /messages.json
   def index
-    @messages = Message.where("'messages'.'room_id' = ? and 'messages'.'to' is NULL", params[:room_id])
+    @messages = Message.where(" messages.room_id = ? and messages.to is NULL", params[:room_id])
     totalMessages = (@messages.size>10) ? 9 : @messages.size
     respond_to do |format|
       format.html # index.html.erb
@@ -94,7 +94,7 @@ class MessagesController < ApplicationController
   def get_private_messages
     @user_id = params[:user_id]
     @room = Room.find(params[:room_id])
-    @privateMessages = Message.where("'messages'.'room_id' = ? and (('messages'.'to'  = ? and 'messages'.'user_id' = ?) or ('messages'.'to' = ? and 'messages'.'user_id' = ?))",@room.id,current_user.id,@user_id,@user_id,current_user.id)
+    @privateMessages = Message.where("messages.room_id = ? and ((messages.to  = ? and messages.user_id = ?) or (messages.to = ? and messages.user_id = ?))",@room.id,current_user.id,@user_id,@user_id,current_user.id)
     @new_message = Message.new
     render :layout => false
   end

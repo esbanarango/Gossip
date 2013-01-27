@@ -34,7 +34,7 @@
 
       @usersIn.each { |u|  
         if u.id != current_user.id
-          @privateMessages[u.id] = Message.where(" 'messages'.'room_id' = ? and (('messages'.'to'  = ? and 'messages'.'user_id' = ?) or ('messages'.'to' = ? and 'messages'.'user_id' = ?))",@room.id,current_user.id,u.id,u.id,current_user.id)
+          @privateMessages[u.id] = Message.where(" messages.room_id = ? and ((messages.to = ? and messages.user_id = ?) or (messages.to = ? and messages.user_id = ?))",@room.id,current_user.id,u.id,u.id,current_user.id)
         end
       }
 

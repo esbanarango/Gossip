@@ -1,12 +1,12 @@
 <% publish_to "/rooms/#{@message.room_id}" do %>
-	var content = $("<%= j render(@message) %>");
+	var content = $("<div/>").html("<%= j render(@message) %>");
 	var msgOwner = content.find(".bodyMessages");
 
 	if($(msgOwner).data("id") !=  $(".elpropio").attr("id")){
 		content.find(".bodyMessages").removeClass("me")
 	}
 
-  $("#chat").append(content);
+  $("#chat").append(content.html());
 
   $("#messages-inner").animate({ scrollTop: $("#chat").prop('scrollHeight')}, 1000);
 
