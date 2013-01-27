@@ -3,7 +3,7 @@
 
 "Gossip Chat is a bad-ass chat application, where you can find the hottest gossips around you. It was developed by some amazing and super talented guys at EAFIT University."
 
- ![PUSH](https://github.com/esbanarango/Topicos-Especiales-en-Telematica/blob/master/Reto%204/Gossip/app/assets/images/gossip.jpg?raw=true)
+ ![PUSH](https://raw.github.com/esbanarango/Gossip/master/Gossip/app/assets/images/gossip.jpg)
 
 #Reto 4
 
