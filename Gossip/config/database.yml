@@ -51,5 +51,6 @@ production:
   encoding: unicode
   database: gossip_production
   pool: 5
-  username: app
-  password:
+  username: postgres
+  password: postgres
+
