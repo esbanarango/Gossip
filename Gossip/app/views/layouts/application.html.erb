@@ -5,6 +5,7 @@
   <!--[if lt IE 9]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
   <![endif]-->
+  <script src="//cdnjs.cloudflare.com/ajax/libs/spin.js/1.2.7/spin.min.js"></script>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
@@ -12,6 +13,7 @@
 </head>
 <body>
 <%= render 'layouts/header' %>
+<div class="spiner-container"></div>
 <div class="container">
 
 	<% flash.each do |name, msg| %>

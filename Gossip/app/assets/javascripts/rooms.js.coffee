@@ -3,6 +3,9 @@
 # You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
 
 jQuery ->
+  $(document).on 'click', "a.link_loader", (e) ->
+    setTimeout('thinking()',1000)
+
 	$(document).on "click",".parner", (e)->
 		id = $(@).attr("id")
 		$(@).find(".newMessages").hide().text(0)

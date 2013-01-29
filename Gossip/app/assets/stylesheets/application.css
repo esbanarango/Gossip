@@ -43,6 +43,20 @@ footer ul li {
   margin-left: 10px;
 }
 
+.spiner-container{
+  display: none;
+  background: rgba(80,80,80,0.7);
+  color: #fff;
+  position: absolute;
+  left: 45%;
+  top: 8%;
+  margin-left: -159px;
+  margin-top: -230px;
+  width: 70px;
+  height: 70px;
+  margin: 0 20px 20px 0;
+  border-radius: 10px 10px 100px 100px;
+}
 
 .room-description{
   list-style: none;
@@ -162,7 +176,13 @@ footer ul li {
 }
 
 
+@media (max-width: 979px) {
 
+  .spiner-container{
+    top: 10.7%;
+  }
+
+}
 
 
 

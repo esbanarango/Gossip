@@ -26,7 +26,7 @@
 							<a href="#" class="user_<%= user.id%> parner" id="<%= user.id%>">
 								<i class="icon-user"></i>
 								<%= user.username%>
-								<span class='newMessages badge badge-important'>0</span>
+								<span class='newMessages badge badge-important' style="display:none;">0</span>
 							</a>	
 							<div id="private_message_<%= user.id%>" class="private_messages">
 								<header class="header_private">Internal Gossip...<div class="shh">"Shhhhh"</div></header>
@@ -76,7 +76,7 @@
 		<%= form_for ([@room, @new_message]), remote: true, :html => { :class => "well"}  do |f| %>
 		  <%= f.text_field :room_id, :type => :hidden,  :value => "#{@room.id}" %>
 		  <%= f.text_field :content, :required=> "required", :placeholder => 'Message...' %>
-		  <%= f.submit "Send" %>
+		  <%= f.submit "Send", class: "btn btn-small btn-success" %>
 		<% end %>
 	</div>
 </div>
@@ -95,7 +95,7 @@
 	var privateMessage= ""
 
 	<% publish_to "/rooms/#{@room.id}" do %>
-	   $('#liUsers').append("<a id='<%= current_user.id%>' class='user_<%= current_user.id%> parner' ><i class='icon-user'></i><%= current_user.username%><span class='badge badge-important newMessages'>0</span></a>");
+	   $('#liUsers').append("<a id='<%= current_user.id%>' class='user_<%= current_user.id%> parner' ><i class='icon-user'></i><%= current_user.username%><span class='badge badge-important newMessages' style='display:none;'>0</span></a>");
 	   $("#num-users").text($("#liUsers a").size());
 	   var data = "";
 	   //Get our messages and subscribe to me

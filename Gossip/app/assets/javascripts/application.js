@@ -14,12 +14,28 @@
 //= require jquery_ujs
 //= require twitter/bootstrap
 //= require private_pub
+//= require lib/jquery.spin
 //= require_tree .
 
 $.fn.exists = function () {
     return this.length !== 0;
 }
 
+
+// Back functions
+var thinking = function(opt) {
+  if (opt == null) {
+    opt = true;
+  }
+  if (opt) {
+    $(".spiner-container").slideDown("fast",function() {
+      $(this).spin("large");
+    });
+  } else{
+    $(".spiner-container").spin(false);
+    $(".spiner-container").slideUp();
+  };
+};
 
 function sleep(milliseconds) {
   var start = new Date().getTime();
