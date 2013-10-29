@@ -65,3 +65,7 @@ Being on the _Gossip Thick_ folder (`$ cd Gossip\ Thick/`), run `$ ruby GossipSe
 [RailsCasts](http://railscasts.com/) was really helpful, thanks Ryan :P.
 
 Room chat design taken from [Liam Kaufman](http://liamkaufman.com/)
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/esbanarango/gossip/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
