@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby   "2.3.7"
+ruby   "1.9.3-p551"
 
 gem 'rails', '3.2.8'
 
@@ -21,7 +21,7 @@ end
 # in production environments by default.
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
-  gem 'coffee-rails', '~> 3.2.1'
+  gem 'coffee-rails', '~> 3.2.2'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   gem 'therubyracer', '~> 0.11.3'
